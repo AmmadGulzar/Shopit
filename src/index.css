@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+body{
+    overflow: hidden;
+    margin: 0;
+    padding:0;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    background-color: rgb(250,251,251);
+ 
+}
+#root{
+  height: 100%;
+}
+.sidebar{
+  height: calc(-110px + 100vh);
+  transition: 225ms cubic-bezier(.36,-0.01,0,.77) !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sidebar_icons{
+  color: rgba(0, 0, 0, 0.54);
 }
+.sidebar_icons_active{
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px 0px 8px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 8px 16px;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 9px;
+  color: white;
+  background-color: rgb(3, 201, 215) ;
+}
+
+.light_container{
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  border-radius: 20px;
+ 
+  box-shadow: rgba(90, 114, 123, 0.11) 0px 7px 30px 0px;
+  position: relative;
+  border-width: 0px;
+}
+.sidebar_shadow{
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: rgba(90, 114, 123, 0.11) 0px 7px 30px 0px;
+}
+.sitting::after{
+
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -250px;
+  width: 400px;
+  height: 100%;
+  transform: unset;
+  background: url('/src/data/sitting.png') 0% 0% / 45% no-repeat;
+  z-index: 1;
+}
+.pie::after{
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  width: 100px;
+  height: 100%;
+  transform: unset;
+  background: url('/src/data/pie-icon.png') 0% 0% / 45% no-repeat;
+}
+
+
+@media (max-width: 900px) {
+  .hide-below-900 {
+    display: none;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
