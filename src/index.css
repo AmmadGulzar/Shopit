@@ -80,12 +80,13 @@ body{
   content: '';
   position: absolute;
   top: 20px;
-  right: -40px;
-  width: 100px;
+  right: -30px;
+  width: 150px;
   height: 100%;
   transform: unset;
-  background: url('/src/data/pie-icon.png') 0% 0% / 45% no-repeat;
+  background: url('/src/data/pie_amine.gif') 0% 0% / 45% no-repeat;
 }
+
 
 
 @media (max-width: 900px) {

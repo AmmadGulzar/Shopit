@@ -7,3 +7,14 @@ const ColorMapping = () => {
 }
 
 export default ColorMapping
+
+
+
+
+
+
+
+
+
+
+    
