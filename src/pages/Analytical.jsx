@@ -2,6 +2,7 @@ import React from 'react'
 import SparkLine from '../components/charts/Sparkline'
 import Bar from '../components/charts/Bar';
 import Button from '../components/button'
+import Dropbox from '../components/DropBox'
 
 
 import { FiDollarSign } from "react-icons/fi";
@@ -21,7 +22,7 @@ const Analytical = () => {
           <div className=' light_container p-5 relative '>
           <div className="pie after:right-[2px] after:cmd:right-[-10px]"></div>
             <div className="sitting after:cmd:w-[500px]"></div>
-            <div className='flex flex-wrap h-full p-4'>
+            <div className='flex flex-wrap h-full p-4 pl-3'>
               <h3 className=' basis-full font-medium text-lg cmd:text-xl pb-2 '> Hey Sir, <br/>Download  <br className='cmd:hidden'/>  Latest Report  </h3>
                <Button/> 
             </div>
@@ -106,9 +107,15 @@ const Analytical = () => {
       <div className={`${flexCont} cxl:basis-1/3`}>
         <div className='w-full h-[32rem]  basis-[100%] p-3'>
           <div className=' light_container flex flex-col '>
-            <div className='basis-1/5 bg-slate-500 flex flex-row '>
-              <div className='basis-1/2 border-amber-100 border-1'></div>
-              <div className='basis-1/2 border-amber-100 border-1'></div>
+            <div className='basis-1/5 flex flex-row '>
+              <div className='basis-1/2 flex flex-row items-center pl-7'>
+              <h3 className=' basis-full font-medium text-xl cmd:text-xl '> Total Sales  </h3>
+              </div>
+              <div className='basis-1/2 items-center'>
+                <div className=''>
+                  <Dropbox/>
+                </div>
+              </div>
             </div>
             <div className=' basis-4/5 bg-slate-700 '></div>
           </div>
